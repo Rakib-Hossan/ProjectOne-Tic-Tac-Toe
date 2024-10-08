@@ -2,7 +2,7 @@ import { useState } from "react";
 function Square({ value, onSquareClick }) {
   return (
     <button
-      className="bg-white border border-gray-600 h-14 w-14 m-1 leading-9 font-bold text-lg"
+      className="bg-green-500 border border-gray-600 h-24 w-24 m-1 leading-9 font-bold text-xl text-white"
       onClick={onSquareClick}
     >
       {value}
@@ -39,7 +39,7 @@ export default function Board() {
       <div className="font-bold text-green-600 p-2 text-2xl text-center">
         {status}
       </div>
-      <div className=" grid">
+      <div className=" grid place-content-center">
         <div className="flex">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
           <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
